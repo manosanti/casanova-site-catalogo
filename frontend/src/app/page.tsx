@@ -3,6 +3,7 @@ import HomeImage from "@/app/imgs/home-banner.webp";
 import GetShine from "@/app/imgs/get-shine-banner.webp";
 import ChairsImage from "@/app/imgs/chairs-rug-banner.webp";
 import FlowersImage from "@/app/imgs/flowers-banner.webp";
+import { FaWhatsapp } from "react-icons/fa";
 
 import Img from "next/image";
 import Link from "next/link";
@@ -88,10 +89,13 @@ export default function Home() {
           <h2 className="font-bold">To Plant a Garden is To Believe in Tomorrow</h2>
           <p>Our plants are sure to brighten up your home (and your future).</p>
         </div>
-        <div>
+      </div>
+        <div className="max-w-screen-2xl mx-auto my-14">
           <TrendingSlider />
         </div>
-      </div>
+        {/* <div className="max-w-7xl mx-auto">
+          <h2 className="text-start max-w-7xl flex items-center mr-2">Interessou? Fale conosco pelo{" "}<Link href={`/`} className="text-white bg-green-500 px-2 py-1 rounded-xl flex items-center max-w-min"><FaWhatsapp />{" "}WhatsApp</Link></h2>
+        </div> */}
     </>
   );
 }
