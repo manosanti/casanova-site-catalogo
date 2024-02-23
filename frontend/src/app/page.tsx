@@ -9,11 +9,28 @@ import Img from "next/image";
 import Link from "next/link";
 import TrendingSlider from "./components/TrendingSlider";
 
+import MascoteHero from "@/app/imgs/mascote-hero.png";
+
 export default function Home() {
   return (
     <>
       <Header />
-      <div className="mb-4" style={{ backgroundColor: "#F0EFEB" }}>
+      <div className="h-screen bg-green-50 flex items-center mb-7">
+        <div className="grid grid-cols-2 max-w-7xl mx-auto items-center">
+          <div>
+            <h2 className="text-6xl font-semibold">
+            Limpeza impecável, preços irresistíveis. Perfeito para todos!
+            </h2>
+            <Link href="/catalogo" className="bg-green-700 text-white p-2 rounded-2xl mt-7 inline-flex items-center text-3xl"><FaWhatsapp className="text-4xl me-2" />{" "}Fale Conosco!</Link>
+            <p className="text-slate-500">Respondemos o mais breve possível!</p>
+          </div>
+          <div className="text-center">
+            <Img src={MascoteHero} alt="home-banner" />
+          </div>
+        </div>
+      </div>
+
+      {/* <div className="mb-4" style={{ backgroundColor: "#F0EFEB" }}>
         <div className="grid grid-cols-2 max-w-7xl mx-auto">
           <div className="my-auto">
             <h3 className="font-bold text-7xl">OFERTAS!</h3>
@@ -26,7 +43,7 @@ export default function Home() {
           </div>
           <Img src={HomeImage} alt="home-banner" />
         </div>
-      </div>
+      </div> */}
       <div
         className="mb-4 grid grid-cols-2 max-w-7xl mx-auto"
         style={{ backgroundColor: "#FFF1E6" }}
@@ -86,14 +103,16 @@ export default function Home() {
       </div>
       <div className="max-w-7xl mx-auto">
         <div>
-          <h2 className="font-bold">To Plant a Garden is To Believe in Tomorrow</h2>
+          <h2 className="font-bold">
+            To Plant a Garden is To Believe in Tomorrow
+          </h2>
           <p>Our plants are sure to brighten up your home (and your future).</p>
         </div>
       </div>
-        <div className="max-w-screen-2xl mx-auto my-14">
-          <TrendingSlider />
-        </div>
-        {/* <div className="max-w-7xl mx-auto">
+      <div className="max-w-screen-2xl mx-auto my-14">
+        <TrendingSlider />
+      </div>
+      {/* <div className="max-w-7xl mx-auto">
           <h2 className="text-start max-w-7xl flex items-center mr-2">Interessou? Fale conosco pelo{" "}<Link href={`/`} className="text-white bg-green-500 px-2 py-1 rounded-xl flex items-center max-w-min"><FaWhatsapp />{" "}WhatsApp</Link></h2>
         </div> */}
     </>
